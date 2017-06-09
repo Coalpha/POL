@@ -131,10 +131,13 @@
                 });
                 q.addEventListener('impress:stepenter', _ => {
                     u = 0;
-                    setTimeout(_ => t = setInterval(_ => q.innerHTML = `Thanks f${++u<23?'or':(u=0)||'ro'} listening!`, 50), 3500);
+                    t = 0;
+                    l = 1;
+                    setInterval(_ => t && (q.innerHTML = `Thanks f${++u<23?'or':(u=0)||'ro'} listening!`, 50));
+                    setTimeout(_ => t = 1, 3500 * l--);
                 });
                 q.addEventListener('impress:stepleave', _ => {
-                    clearInterval(t);
+                    t = 0;
                     q.innerHTML = 'Thnask for ltisienng!';
                 });
 
