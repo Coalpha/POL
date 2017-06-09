@@ -24,3 +24,7 @@
 .link:hover {
     color: teal;
 }
+
+#n {
+    opacity: 0;
+}
