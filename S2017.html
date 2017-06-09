@@ -104,7 +104,7 @@
                 </span>
             </div>
             <div id='q' class="step deck" data-x=8500 data-y=10 data-z=2000 data-rotate-x=270>
-                Thansk for litseinng!
+                Thnask for ltisienng!
             </div>
             <script src="impress.min.js"></script>
             <script>
@@ -131,11 +131,11 @@
                 });
                 q.addEventListener('impress:stepenter', _ => {
                     u = 0;
-                    setTimeout(_ => t = setInterval(_ => q.innerHTML = `Thanks f${++u<23?'or':(u=0)||'ro'} listening!`, 50), 1500);
+                    setTimeout(_ => t = setInterval(_ => q.innerHTML = `Thanks f${++u<23?'or':(u=0)||'ro'} listening!`, 50), 2500);
                 });
                 q.addEventListener('impress:stepleave', _ => {
                     clearInterval(t);
-                    q.innerHTML = 'Thansk for litseinng!';
+                    q.innerHTML = 'Thnask for ltisienng!';
                 });
 
                 function f() {
