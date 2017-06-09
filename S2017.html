@@ -103,6 +103,9 @@
                 </span><br>- Different people, different perspectives <span style='font-size:10px'>(duh)</span>
                 </span>
             </div>
+            <div id='q' class="step deck" data-x=8500 data-y=10 data-z=2000 data-rotate-x=270>
+                Thansk for litseinng!
+            </div>
             <script src="impress.min.js"></script>
             <script>
                 impress().init();
@@ -125,6 +128,14 @@
                 });*/
                 c.addEventListener('impress:stepenter', _ => {
                     setTimeout(_ => cu.style.fontSize = '64px', 200);
+                });
+                q.addEventListener('impress:stepenter', _ => {
+                    u = 0;
+                    setTimeout(_ => t = setInterval(_ => q.innerHTML = `Thanks f${++u<23?'or':(u=0)||'ro'} listening!`, 50), 1500);
+                });
+                q.addEventListener('impress:stepleave', _ => {
+                    clearInterval(t);
+                    q.innerHTML = 'Thansk for litseinng!';
                 });
 
                 function f() {
